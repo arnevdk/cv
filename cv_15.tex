@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenneker Resume/CV
+% LaTeX Template
+% Version 1.1 (19/6/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,12pt]{memoir} % Font and paper size
+
+\input{structure.tex} % Include the file specifying document layout and packages
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION 
+%----------------------------------------------------------------------------------------
+
+\userinformation{ % Set the content that goes into the sidebar of each page
+\begin{flushright}
+% Comment out this figure block if you don't want a photo
+\includegraphics[width=0.6\columnwidth]{photo.jpg}\\[\baselineskip] % Your photo
+\small % Smaller font size
+Arne Van Den Kerchove \\ % Your name
+\url{arne.vandenkerchove@student.kuleuven.be} \\ % Your email address
+\url{arne.vandenkerchove.com} \\ % Your URL
+0473/32 78 71 \\ % Your phone number
+\Sep % Some whitespace
+\textbf{Address} \\
+33 Dijkstraat \\ % Address 1
+Dessel, 2480 \\ % Address 2
+Belgium \\ % Address 3
+\vfill % Whitespace under this block to push it up under the photo
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
+
+%----------------------------------------------------------------------------------------
+%	HEADING
+%----------------------------------------------------------------------------------------
+
+\cvheading{Arne Van Den Kerchove} % Large heading - your name
+
+\cvsubheading{Computer Science Student} % Subheading - your occupation/specialization
+
+%----------------------------------------------------------------------------------------
+%	ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{About Me}{I am a motivated Computer Science Student at KU Leuven University. I volunteer in multiple non-profit organisations, both in Leuven and in my home town. My field of interest is large and I love to discover new experiences and cultures.}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION 
+%----------------------------------------------------------------------------------------
+
+\CVSection{Education}
+
+%------------------------------------------------
+
+\CVItem{2014 - present, KU Leuven University}{Bachelor's Degree in Informatics (Ongoing)}
+
+\CVItem{2008 - 2014, Sancta Maria Institute Kasterlee}{Modern Languages - Mathematics, option Science}
+
+%------------------------------------------------
+
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\CVSection{Professional Experience}
+
+\CVItem{2016 - present, \textit{Freelance Drupal Webdeveloper}}{
+I currently am a self-employed webdeveloper and webdesigner. I use the Drupal CMS to provide personalised websites to my clients.
+}
+
+\CVItem{May 2015, \textit{Database Refactoring}, Brabantse Apothekers Federatie}{Transferring the company's database to a new database management program.}
+
+\CVItem{June 2014 - August 2014, \textit{Front-end Webdeveloper}, GBits Webdevelopement}{Designing CSS/HTML templates for the DotNetNuke CMS.}
+
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+
+\CVSection{Personal Experience}
+
+\CVItem{February 2016 - present, \textit{Webmaster}, Scientica Leuven vzw}{I manage the computer systems, software and website of the overarching student Association Scientica. I am in control of a multi-server system, primarily used for our member database and student course sale system.}
+
+\CVItem{2015 - present, \textit{Responsible Person Webteam}, Wina Leuven vzw}{I lead the technical support team of my student Association Wina.}
+
+\CVItem{2014 - present, \textit{Deputy Responsible Person}, Youth Red Cross Retie-Dessel}{
+I am a youth leader in my local youth movement. We are an openly accessible youth movement, that combines playing and teaching about First Aid.
+}
+
+\CVItem{July 2016, \textit{Sailing Trainee}, The Tall Ships Races}{I participated in the 2016 Tall Ships Races. This is an international and multicultural sailing regatta. I worked and lived  together with people from different countries while sailing from Antwerp to Lisboa.}
+
+
+\Sep
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Communication Skills}
+
+{\begin{tabular}{p{1\textwidth}}
+		\bluebullet \textit{Native Language}: Dutch \\
+		\bluebullet \textit{Full Professional Proficiency}: English, German \\
+		\bluebullet \textit{Minimum Professional Proficiency}: French \\
+		\bluebullet \textit{Elementary Proficiency}: Spanish, Italian \\
+\end{tabular}}
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	NEW PAGE DELIMITER
+%	Place this block wherever you would like the content of your CV to go onto the next page
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Software Development Skills}
+
+%------------------------------------------------
+
+\CVItem{Programming}
+{\begin{tabular}{p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth}}
+\bluebullet Java &  \bluebullet C, C++ & \bluebullet Python & \bluebullet Haskell\\
+\bluebullet PHP &  \bluebullet C\# & \bluebullet Matlab & \bluebullet Prolog \\
+\bluebullet JQuery 
+\end{tabular}}
+
+%------------------------------------------------
+
+\CVItem{Computer Software}
+{\begin{tabular}{p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth}}
+ \bluebullet MySQL &  \bluebullet HTML & \bluebullet CSS & \bluebullet Git\\
+ \bluebullet LaTeX &  \bluebullet Adobe CS6 & \bluebullet R & \bluebullet Server stack\\
+\end{tabular}}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+
+
+\CVSection{Other Qualifications}
+
+
+\CVItem{\textit{Animator in Youth Work}, Flemish Government}{}
+\CVItem{\textit{First Aid Emergency Worker}, Belgian Red Cross}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Interests}
+
+%------------------------------------------------
+
+\CVItem{Professional}{Artificial intelligence, software design, webdesign and webdevelopment, declarative programming languages, science and engineering.}
+
+%------------------------------------------------
+
+\CVItem{Personal}{Travelling, first aid and Red Cross, books, guitar, biology.}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
