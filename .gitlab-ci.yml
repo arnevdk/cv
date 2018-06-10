@@ -17,13 +17,13 @@ deploy_production:
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - mkdir -p ~/.ssh
     - eval $(ssh-agent -s)
-    - ssh-keyscan -H alagaesia.vandenkerchove.com >> ~/.ssh/known_hosts
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
     - '[[ -f /.dockerenv ]] && echo -e "Host *ntStrictHostKeyChecking nonn" > ~/.ssh/config'
     - ssh-add <(echo "$DEPLOY_PRIVATE_KEY")
     - apt-get install rsync
   script:
-    - ssh -v -p22 git@alagaesia.vandenkerchove.com "mkdir -p /var/www/arne.vandenkerchove.com/_tmp"
+    - ssh -v -p22 git@$DEPLOY_SERVER_URL "mkdir -p /var/www/arne.vandenkerchove.com/_tmp"
     - rsync -rav -e ssh  --delete-excluded ./cv.pdf git@alagaesia.vandenkerchove.com:/var/www/arne.vandenkerchove.com/cv.pdf
-    - ssh -v -p22 git@alagaesia.vandenkerchove.com "mv /var/www/arne.vandenkerchove.com/_tmp/cv.pdf /var/www/arne.vandenkerchove.com/cv.pdf"
+    - ssh -v -p22 git@$DEPLOY_SERVER_URL "mv /var/www/arne.vandenkerchove.com/_tmp/cv.pdf /var/www/arne.vandenkerchove.com/cv.pdf"
   only:
     - master
