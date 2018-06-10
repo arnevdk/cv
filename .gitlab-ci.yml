@@ -1,9 +1,10 @@
 stages:
+  - install
   - compile
   - publish
-
-prepare_container:
-  stage: compile
+ 
+install_latex_script:
+  stage: install
   script:
    - bash ./install_latex_script.sh
    - sudo apt install pdflatex
