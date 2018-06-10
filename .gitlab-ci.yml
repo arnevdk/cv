@@ -25,8 +25,8 @@ deploy_production:
     - apt-get install rsync
   script:
     - ssh git@$DEPLOY_SERVER_URL
-    - ssh -v -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mkdir -p $DEPLOY_PATH/_tmp"
-    - rsync -rav -e ssh  --delete-excluded ./cv.pdf $DEPLOY_USER@$DEPLOY_SERVER_URL:$DEPLOY_PATH/cv.pdf
-    - ssh -v -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mv $DEPLOY_PATH/_tmp/cv.pdf $DEPLOY_PATH/cv.pdf"
+    - ssh -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mkdir -p $DEPLOY_PATH/_tmp"
+    - rsync -rav -e ssh  --delete-excluded ./cv.pdf $DEPLOY_USER@$DEPLOY_SERVER_URL:$DEPLOY_PATH/_tmp/cv.pdf
+    - ssh -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mv $DEPLOY_PATH/_tmp/cv.pdf $DEPLOY_PATH/cv.pdf"
   only:
     - master
