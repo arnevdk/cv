@@ -5,13 +5,13 @@ stages:
 prepare_container:
   stage: compile
   script:
-   - sudo apt update
+   - bash ./install_latex_script.sh
    - sudo apt install pdflatex
 
 compile_pdf:
   stage: compile
   script: 
-    - pdflatex cv.tex
+    - ./latexdockercmd.sh pdflatex cv.tex
   artifacts:
     paths:
       - cv.pdf
