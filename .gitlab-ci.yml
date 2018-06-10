@@ -6,8 +6,7 @@ stages:
 install_latex_script:
   stage: install
   script:
-   - bash ./install_latex_script.sh
-   - sudo apt install pdflatex
+   - bash ./download_latex_script.sh
 
 compile_pdf:
   stage: compile
