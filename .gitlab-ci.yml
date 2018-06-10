@@ -17,6 +17,7 @@ deploy_production:
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - mkdir -p ~/.ssh
     - eval $(ssh-agent -s)
+    - ssh-keyscan -H alagaesia.vandenkerchove.com >> ~/.ssh/known_hosts
     - '[[ -f /.dockerenv ]] && echo -e "Host *ntStrictHostKeyChecking nonn" > ~/.ssh/config'
     - ssh-add <(echo "$DEPLOY_PRIVATE_KEY")
     - apt-get install rsync
