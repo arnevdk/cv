@@ -1,6 +1,6 @@
 stages:
   - compile
-  - publish
+  - deploy 
  
 compile_pdf:
   stage: compile
@@ -10,9 +10,19 @@ compile_pdf:
     paths:
       - cv.pdf
 
-deploy_on_web:
-  stage: publish
+deploy_production:
+  stage: deploy
+  image: tetraweb/php:7.1
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *ntStrictHostKeyChecking nonn" > ~/.ssh/config'
+    - ssh-add <(echo "$DEPLOY_KEY")
+    - apt-get install rsync
   script:
-    - mv ./cv.pdf /var/www/arne.vandenkerchove.com/cv.pdf
+    - ssh -p22 git@alagaesia.vandenkerchove.com "mkdir -p /var/www/arne.vandenkerchove.com/_tmp"
+    - rsync -rav -e ssh  --delete-excluded ./cv.pdf git@alagaesia.vandenkerchove.com:/var/www/arne.vandenkerchove.com/cv.pdf
+    - ssh -p22 git@alagaesia.vandenkerchove.com "mv /var/www/arne.vandenkerchove.com/_tmp/cv.pdf /var/www/arne.vandenkerchove.com/cv.pdf"
   only:
     - master
