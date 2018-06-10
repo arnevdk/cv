@@ -13,6 +13,6 @@ compile_pdf:
 deploy_on_web:
   stage: publish
   script:
-    - ls
+    - mv ./cv.pdf /var/www/arne.vandenkerchove.com/cv.pdf
   only:
     - master
