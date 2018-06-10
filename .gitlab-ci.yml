@@ -1,0 +1,16 @@
+stages:
+  - compile
+  - publish
+
+compile_pdf:
+  stage: compile
+  script: 
+    - pdflatex cv.tex
+  artifacts:
+    paths:
+      - cv.pdf
+
+deploy_on_web
+  stage: publish
+  script:
+    - ls
