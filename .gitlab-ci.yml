@@ -2,6 +2,12 @@ stages:
   - compile
   - publish
 
+prepare_container:
+  stage: compile
+  script:
+   - sudo apt update
+   - sudo apt install pdflatex
+
 compile_pdf:
   stage: compile
   script: 
