@@ -10,7 +10,7 @@ compile_pdf:
     paths:
       - cv.pdf
 
-deploy_on_web
+deploy_on_web:
   stage: publish
   script:
     - ls
