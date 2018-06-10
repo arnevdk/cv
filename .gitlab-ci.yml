@@ -5,8 +5,8 @@ stages:
 compile_pdf:
   stage: compile
   script: 
-    - ./download_latex_script.sh
-    - ./latexdockercmd.sh pdflatex cv.tex
+    - bash ./download_latex_script.sh
+    - bash ./latexdockercmd.sh pdflatex cv.tex
   artifacts:
     paths:
       - cv.pdf
