@@ -1,16 +1,11 @@
 stages:
-  - install
   - compile
   - publish
  
-install_latex_script:
-  stage: install
-  script:
-   - bash ./download_latex_script.sh
-
 compile_pdf:
   stage: compile
   script: 
+    - ./download_latex_script.sh
     - ./latexdockercmd.sh pdflatex cv.tex
   artifacts:
     paths:
