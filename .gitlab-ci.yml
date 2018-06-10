@@ -1,7 +1,10 @@
 stages:
   - compile
   - deploy 
- 
+
+variables:
+  DEPLOY_PATH: "/var/www/arne.vandenkerchove.com
+
 compile_pdf:
   stage: compile
   script: 
@@ -12,7 +15,6 @@ compile_pdf:
 
 deploy_production:
   stage: deploy
-  image: tetraweb/php:7.1
   before_script:
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - mkdir -p ~/.ssh
@@ -23,8 +25,8 @@ deploy_production:
     - apt-get install rsync
   script:
     - ssh git@$DEPLOY_SERVER_URL
-    - ssh -v -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mkdir -p /var/www/arne.vandenkerchove.com/_tmp"
-    - rsync -rav -e ssh  --delete-excluded ./cv.pdf git@alagaesia.vandenkerchove.com:/var/www/arne.vandenkerchove.com/cv.pdf
-    - ssh -v -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mv /var/www/arne.vandenkerchove.com/_tmp/cv.pdf /var/www/arne.vandenkerchove.com/cv.pdf"
+    - ssh -v -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mkdir -p $DEPLOY_PATH/_tmp"
+    - rsync -rav -e ssh  --delete-excluded ./cv.pdf $DEPLOY_USER@$DEPLOY_SERVER_URL:$DEPLOY_PATH/cv.pdf
+    - ssh -v -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mv $DEPLOY_PATH/_tmp/cv.pdf $DEPLOY_PATH/cv.pdf"
   only:
     - master
