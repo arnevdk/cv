@@ -3,7 +3,7 @@ stages:
   - deploy 
 
 variables:
-  DEPLOY_PATH: "/var/www/arne.vandenkerchove.com
+  DEPLOY_PATH: "/var/www/arne.vandenkerchove.com"
 
 compile_pdf:
   stage: compile
