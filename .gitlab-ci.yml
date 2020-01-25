@@ -1,32 +1,7 @@
-stages:
-  - compile
-  - deploy 
-
-variables:
-  DEPLOY_PATH: "/var/www/arne.vandenkerchove.com"
 
 compile_pdf:
-  stage: compile
-  script: 
+  script:
     - pdflatex cv.tex
   artifacts:
     paths:
       - cv.pdf
-
-deploy_production:
-  stage: deploy
-  before_script:
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    - mkdir -p ~/.ssh
-    - eval $(ssh-agent -s)
-    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-    - '[[ -f /.dockerenv ]] && echo -e "Host *ntStrictHostKeyChecking nonn" > ~/.ssh/config'
-    - ssh-add <(echo "$DEPLOY_PRIVATE_KEY")
-    - apt-get install rsync
-  script:
-    - ssh git@$DEPLOY_SERVER_URL
-    - ssh -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mkdir -p $DEPLOY_PATH/_tmp"
-    - rsync -rav -e ssh  --delete-excluded ./cv.pdf $DEPLOY_USER@$DEPLOY_SERVER_URL:$DEPLOY_PATH/_tmp/cv.pdf
-    - ssh -p22 $DEPLOY_USER@$DEPLOY_SERVER_URL "mv $DEPLOY_PATH/_tmp/cv.pdf $DEPLOY_PATH/cv.pdf"
-  only:
-    - master
