@@ -1,7 +1,7 @@
 image: schickling/latex
 compile_pdf:
   script:
-    - apt update && apt install fontawesome
+    - tlmgr install fontawesome
     - pdflatex cv.tex
   artifacts:
     paths:
