@@ -1,4 +1,4 @@
-
+image: schickling/latex
 compile_pdf:
   script:
     - pdflatex cv.tex
