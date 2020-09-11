@@ -23,6 +23,7 @@
 
 \documentclass[10pt,a4paper,ragged2e]{altacv}
 \usepackage{fontawesome}
+\usepackage{enumitem}
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
@@ -33,13 +34,13 @@
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
-  % If using xelatex or lualatex:
-  \setmainfont{Carlito}
+% If using xelatex or lualatex:
+\setmainfont{Carlito}
 \else
-  % If using pdflatex:
-  \usepackage[utf8]{inputenc}
-  \usepackage[T1]{fontenc}
-  \usepackage[default]{lato}
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
 \fi
 
 % Change the colours if you want to
@@ -60,31 +61,31 @@
 %\addbibresource{sample.bib}
 
 \begin{document}
-\name{Arne Van Den Kerchove}
-\tagline{computer science student / volunteer / machine learning enthousiast / sysadmin}
+    \name{Arne Van Den Kerchove}
+    \tagline{computer science / machine learning / volunteering }
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
 %\photo{3.3cm}{profile.jpg}
-\personalinfo{%
-  % Not all of these are required!
-  % You can add your own with \printinfo{symbol}{detail}
-  	\email{arne@vandenkerchove.com}
-   \phone{+32 473 32 78 71}
+    \personalinfo{%
+    % Not all of these are required!
+    % You can add your own with \printinfo{symbol}{detail}
+        \email{arne@vandenkerchove.com}
+        \phone{+32 473 32 78 71}
 %  \mailaddress{Address, Street, 00000 County}
-  	\location{Leuven/Dessel, Belgium}
-	%\homepage{arne.vandenkerchove.com}
+        \location{Leuven, Belgium}
+    %\homepage{arne.vandenkerchove.com}
 %  \twitter{@marissamayer}
-  %\linkedin{linkedin.com/in/ronak-dedhiya}
-   %\github{github.com/ronakdedhiya} % I'm just making this up though.
+        \linkedin{linkedin.com/in/arne-van-den-kerchove}
+    %\github{github.com/ronakdedhiya} % I'm just making this up though.
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
-}
+    }
 
 %% Make the header extend all the way to the right, if you want.
-\begin{fullwidth}
-\makecvheader
-\end{fullwidth}
+    \begin{fullwidth}
+        \makecvheader
+    \end{fullwidth}
 
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-\AtBeginEnvironment{itemize}{\small}
+    \AtBeginEnvironment{itemize}{\small}
 
 %% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
 %% You can always just use \marginpar{...} if you do
@@ -93,82 +94,82 @@
 
 
 
-\cvsection[page1sidebar]{Professional Experience}
+    \cvsection[page1sidebar]{Professional Experience}
 
-\cvevent{Teaching assistant Fundamentals of Computer Science}{KU Leuven University}{February 2019 -- Ongoing}
+    \cvevent{Teaching assistant Fundamentals of Computer Science}{KU Leuven University}{February 2019 -- ongoing}
 
-Teaching exercise sessions in Python programming and algorithmic reasoning to first year engineering students.
+    Teaching exercise sessions in Python programming and algorithmic reasoning to first year engineering students.
 
-\divider
+    \divider
 
-\cvevent{Flask developer}{Mindspeller}{July 2019 -- December 2019}
+    \cvevent{Full stack web developer}{Self employed}{2016 -- ongoing}
+    %\begin{itemize}
+    %	\item Development of websites and web based solutions using Drupal CMS or Django.
+    %	\item Management of physical and virtualized server infrastructure for web hosting.
+    %	\item Customized front end web design.
+    %\end{itemize}
 
-Python Flask developer in a KU Leuven spin off that provides neuromarketing services based on scientifically validated
-neuroscience and artificial intelligence research.
+    \divider
 
-\divider
+    \cvevent{Flask developer}{Mindspeller}{July 2019 -- December 2019}
 
+    Python Flask developer in a KU Leuven spin-off that provides neuromarketing services based on scientifically validated
+    neuroscience and artificial intelligence research.
 
-
-\cvevent{Full stack web developer}{self employed}{2016 -- ongoing}
-%\begin{itemize}
-%	\item Development of websites and web based solutions using Drupal CMS or Django.
-%	\item Management of physical and virtualized server infrastructure for web hosting.
-%	\item Customized front end web design.
-%\end{itemize}
-
-\divider
-
-\cvevent{Database technician}{Pharmacists Federation of Brabant}{May 2015}
-%\begin{itemize}
-%	\item Database management and refactoring.
-%	\item Transfer of SQL databases to a new database platform.
-%\end{itemize}
-
-\divider
-
-\cvevent{Front end web developer}{GBits Web Development}{2014}
-
-\cvsection{Volunteering Experience}
-
-\cvevent{Secretary of the Board of Directors}{Scientica Leuven vzw}{2018 -- 2019}
-\begin{itemize}
-	\item Day-to-day management of an overarching student organization at the Faculty of Science of KU Leuven.
-	\item Responsible for internal quality assurance and documentation.
-	\item Setup of technology stack to support organization structure.
-\end{itemize}
-
-\divider
+    \divider
 
 
-\cvevent{Webmaster}{Scientica and Wina Leuven vzw}{2015 -- 2019}
-\begin{itemize}
-	\item Team leader of the technical support teams of multiple student organizsations.
-	\item Development and maintenance of websites, internal tools and online course service platform.
-	\item Sysadmin of distributed Linux server infrastructure.
-	\item Member of the Board of Directors of Wina Leuven vzw.
-\end{itemize}
+    \cvevent{Database technician}{Pharmacists Federation of Brabant}{May 2015}
+    %\begin{itemize}
+    %	\item Database management and refactoring.
+    %	\item Transfer of SQL databases to a new database platform.
+    %\end{itemize}
 
-\divider
+    \divider
 
-\cvevent{PAL tutor Principles of Computer Programming}{KU Leuven University}{2015}
+    \cvevent{Front end web developer}{GBits Web Development}{2014}
 
-\small Organizing and teaching Peer Assisted Learning sessions in Python programming to first year Informatics students.
+    \cvsection{Volunteering Experience}
 
-\divider
+    \cvevent{Secretary of the Board of Directors}{Scientica Leuven vzw}{2018 -- 2019}
+    \begin{itemize}
+        \item Day-to-day management of an overarching student organization at the Faculty of Science of KU Leuven.
+        \item Responsible for internal quality assurance and documentation.
+        \item Setup of technology stack to support organization structure.
+    \end{itemize}
 
-\cvevent{Deputy president and first aid instructor}{Youth Red Cross Retie-Dessel}{2014-2018}
-\begin{itemize}
-	\item Youth leader in an openly accessible youth movement.
-	\item First aid instructor for children of ages 6 through 16.
-\end{itemize}
+    \divider
+
+
+    \cvevent{Webmaster}{Scientica and Wina Leuven vzw}{2015 -- 2019}
+    \begin{itemize}
+        \item Team leader of the technical support teams of multiple student organizsations.
+        \item Development and maintenance of websites, internal tools and online course service platform.
+        \item Sysadmin of distributed Linux server infrastructure.
+        \item Member of the Board of Directors of Wina Leuven vzw.
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Deputy president and first aid instructor}{Youth Red Cross Retie-Dessel}{2014-2018}
+    \begin{itemize}
+        \item Youth leader in an openly accessible youth movement.
+        \item First aid instructor for children of ages 6 through 16.
+    \end{itemize}
+
+    \divider
+
+
+    \cvevent{PAL tutor Principles of Computer Programming}{KU Leuven University}{2015}
+
+    \small Organizing and teaching Peer Assisted Learning sessions in Python programming to first year Informatics students.
+
+
 %\divider
-
 
 
 % \divider
 %\cvskill{German}{3}
-
 
 
 % \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
@@ -194,11 +195,11 @@ neuroscience and artificial intelligence research.
 %   5/8em/accent!20/Baking cupcakes
 % }
 
-\clearpage
+    \clearpage
 
 % \cvsection[page2sidebar]{Publications}
 
-\nocite{*}
+    \nocite{*}
 
 % \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
 
