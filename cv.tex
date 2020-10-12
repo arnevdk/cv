@@ -23,6 +23,8 @@
 
 \documentclass[10pt,a4paper,ragged2e]{altacv}
 \usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{graphicx}
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
@@ -61,7 +63,7 @@
 
 \begin{document}
     \name{Arne Van Den Kerchove}
-    \tagline{computer science / machine learning / volunteering }
+    \tagline{brain-computer interfaces / machine learning / volunteering }
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
 %\photo{3.3cm}{profile.jpg}
     \personalinfo{%
@@ -91,15 +93,33 @@
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
 
+    \cvsection[page1sidebar]{Education}
 
-
-    \cvsection[page1sidebar]{Professional Experience}
-
-    \cvevent{Teaching assistant Fundamentals of Computer Science}{KU Leuven University}{February 2019 -- ongoing}
-
-    Teaching exercise sessions in Python programming and algorithmic reasoning to first year engineering students.
+    \cvevent{Ph.D. in Computational Neuroscience}{KU Leuven
+    University, University of Lille}{2020 -- ongoing}
 
     \divider
+
+    \cvevent{M.Sc. in Computer Science, \textnormal{\textit{cum laude}}}{KU Leuven
+    University}{2017 -- 2020}
+
+    %\begin{itemize}
+    %\item Option Artificial Intelligence
+    %\item \textbf{Master thesis}: \textit{Transcription of multiple ERP components from EEG recordings using
+    %spatio-temporal beamforming} (16/20)
+    %\end{itemize}
+
+    \divider
+
+    \cvevent{B.Sc. in Informatics}{KU Leuven University}{2014 -- 2017}
+
+    %\begin{itemize}
+    %\item Minor Natural Sciences
+    %\item \textbf{Bachelor thesis}: \textit{Drone simulator and stereoscopic object
+    %detection autopilot} (19/20)
+    %\end{itemize}
+
+    \cvsection{Professional Experience}
 
     \cvevent{Full stack web developer}{Self employed}{2016 -- ongoing}
     %\begin{itemize}
@@ -110,10 +130,18 @@
 
     \divider
 
+    \cvevent{Teaching assistant Fundamentals of Computer Science}{KU Leuven University}{February -- June 2019}
+
+    %Teaching exercise sessions in Python programming and algorithmic reasoning to first year engineering students.
+
+    \divider
+
+
+
     \cvevent{Flask developer}{Mindspeller}{July 2019 -- December 2019}
 
-    Python Flask developer in a KU Leuven spin-off that provides neuromarketing services based on scientifically validated
-    neuroscience and artificial intelligence research.
+    %Python Flask developer in a KU Leuven spin-off that provides neuromarketing services based on scientifically validated
+    %neuroscience and artificial intelligence research.
 
     \divider
 
@@ -131,37 +159,41 @@
     \cvsection{Volunteering Experience}
 
     \cvevent{Secretary of the Board of Directors}{Scientica Leuven vzw}{2018 -- 2019}
-    \begin{itemize}
-        \item Day-to-day management of an overarching student organization at the Faculty of Science of KU Leuven.
-        \item Responsible for internal quality assurance and documentation.
-        \item Setup of technology stack to support organization structure.
-    \end{itemize}
+
+    %Day-to-day management of an overarching student organization at the Faculty of Science of KU Leuven.
+    %\begin{itemize}
+    %    \item Day-to-day management of an overarching student organization at the Faculty of Science of KU Leuven.
+    %    \item Responsible for internal quality assurance and documentation.
+    %    \item Setup of technology stack to support organization structure.
+    %\end{itemize}
 
     \divider
 
 
     \cvevent{Webmaster}{Scientica and Wina Leuven vzw}{2015 -- 2019}
-    \begin{itemize}
-        \item Team leader of the technical support teams of multiple student organizations.
-        \item Development and maintenance of websites, internal tools and online course service platform.
-        \item Sysadmin of distributed Linux server infrastructure.
-        \item Member of the Board of Directors of Wina Leuven vzw.
-    \end{itemize}
+
+    %Team leader of the technical support teams of multiple student organizations.
+    %\begin{itemize}
+    %    \item Team leader of the technical support teams of multiple student organizations.
+    %    \item Development and maintenance of websites, internal tools and online course service platform.
+    %    \item Sysadmin of distributed Linux server infrastructure.
+    %    \item Member of the Board of Directors of Wina Leuven vzw.
+    %\end{itemize}
 
     \divider
 
     \cvevent{Deputy president and first aid instructor}{Youth Red Cross Retie-Dessel}{2014-2018}
-    \begin{itemize}
-        \item Youth leader in an openly accessible youth movement.
-        \item First aid instructor for children of ages 6 through 16.
-    \end{itemize}
+    %\begin{itemize}
+    %    \item Youth leader in an openly accessible youth movement.
+    %    \item First aid instructor for children of ages 6 through 16.
+    %\end{itemize}
 
     \divider
 
 
     \cvevent{PAL tutor Principles of Computer Programming}{KU Leuven University}{2015}
 
-    \small Organizing and teaching Peer Assisted Learning sessions in Python programming to first year Informatics students.
+    %\small Organizing and teaching Peer Assisted Learning sessions in Python programming to first year Informatics students.
 
 
 %\divider
