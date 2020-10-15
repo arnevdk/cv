@@ -1,6 +1,7 @@
 image: blang/latex
 compile_pdf:
   script:
+    - set +e
     - tlmgr init-usertree
     - tlmgr install fontawesome
     - pdflatex cv.tex
