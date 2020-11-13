@@ -14,6 +14,7 @@ compile_academic:
     - set +e
     - tlmgr init-usertree
     - tlmgr install fontawesome
+    - tlmgr install academicons
     - xelatex academic_cv.tex
     - biber professional_cv.tex
     - xelatex academic_cv.tex
