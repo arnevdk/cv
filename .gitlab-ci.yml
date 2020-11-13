@@ -16,7 +16,7 @@ compile_academic:
     - tlmgr install fontawesome
     - tlmgr install academicons
     - xelatex academic_cv.tex
-    - biber professional_cv.tex
+    - biber academic_cv.tex
     - xelatex academic_cv.tex
     - xelatex academic_cv.tex
   artifacts:
