@@ -1,0 +1,34 @@
+@MastersThesis{VanDenKerchove2020,
+    author = {Van Den Kerchove, Arne},
+    school = {KU Leuven},
+    title = {Linguistic transcription of EEG responses to sequences of visual stimuli},
+    year = {2020},
+    abstract = {This work constructs an algorithm to transcribe event-related potentials (ERPs)
+recorded by EEG in response to a sequence of single-trial stimuli, to a sequence of
+symbols. Each symbol represents a distinct category of ERP shapes. The resulting
+sequence-of-symbols representation is a noise-reduced format for sequences of ERPs
+and can be utilized by pattern mining algorithms to analyze sequential and contextual
+structure in sequences of ERPs. This information would otherwise be lost when
+averaging over multiple EEG trials, which is currently the most popular method for
+reducing noise in ERPs. The algorithm is developed using available EEG recordings
+from N -back experiments, a visual paradigm which produces a sequence of ERPs.
+In order to cope with the remarkably high signal-to-noise ratio, spatio-temporal
+beamforming is applied as a linear filter to extract noise-reduced features from
+single-trial ERPs. This work extends the spatio-temporal beamformer to the spatio-
+temporal multi-component beamformer to capture more information from each ERP.
+Two multi-component beamforming approaches are developed. The first method is
+based on time-window truncated activation patterns, while the second method refines
+the component activation patterns to isolate specific ERP components. Subsequently,
+features extracted by the multi-component-beamformer are categorized in groups,
+which in turn can be represented by a transcribed symbol, using k-medoids clustering.
+The methods are validated by testing the informativeness of extracted features in
+several classification tasks and by inspecting the representative ERPs for each symbol,
+obtained by averaging over all trials in the symbol’s cluster.
+Results show that the multi-component beamformer has the potential to improve
+state-of-the-art performance in target/non-target classification for ERP based Brain-
+Computer Interface paradigms. Visual inspection of symbol representatives shows
+apparent differences in ERP shape for each cluster, indicating that the algorithm can
+capture different types of ERPs in different symbols. However, this method is still
+hindered in its performance and applicability by the large inter-subject variability of
+ERPS, as well as the inherently high noise levels present in single-trial ERPs.},
+}
