@@ -9,11 +9,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{doi}
-\usepackage[style=numeric, sorting=ynt]{biblatex}
+\usepackage[style=apa, sorting=ynt]{biblatex}
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{MnSymbol}%
 \usepackage{wasysym}%
+\usepackage{makecell}
+\usepackage{tabularx}
 
 \geometry{left=1in,right=1in,top=1in,bottom=1in}
 \setlength{\parindent}{0}
@@ -23,7 +25,7 @@
 
 \begin{document}
     \begin{minipage}{.75\linewidth}
-        \Large ir. Arne Van Den Kerchove\\
+        \Large ir. \textbf{Arne Van Den Kerchove}\\
         \normalsize Doctoral Researcher at KU Leuven Neurophysiology Group
 
         \bigskip
@@ -55,37 +57,43 @@
     user interface design.
 
     \section*{Education}
-
-    \begin{itemize}
-        \item Ph.D. in Biomedical Sciences, KU Leuven, ongoing
-        \item Ph.D. in Control Science and Signal Processing, University of Lille, ongoing
-        \item M.Sc. in Engineering Sciences, Computer Science, 2020
-        \item B.Sc. in Informatics, KU Leuven, 2017
-    \end{itemize}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
+        ongoing & Ph.D. in Biomedical Sciences, KU Leuven                             \\
+        ongoing & Ph.D. in Control Science and Signal Processing, University of Lille \\
+        2020    & M.Sc. in Engineering Sciences, Computer Science                     \\
+        2017    & B.Sc. in Informatics, KU Leuven                                     \\
+    \end{tabularx}
 
 
     \section*{Professional Experience}
-    \begin{itemize}
-        \item Research Assistant, KU Leuven Neuro- and Psychophysiology Lab, 2020-ongoing
-    \end{itemize}
+
+    \begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
+        2020 - ongoing & Research Assistant, KU Leuven Neuro- and Psychophysiology Lab \\
+        07/2019 - 12/2019 & Python Developer, Mindspeller; Python Flask developer in a KU Leuven spin-off that provides
+        neuromarketing services based on scientifically validated neuroscience and
+        artificial intelligence research. \\
+    \end{tabularx}
+
 
     \section*{Teaching Experience}
 
-    \begin{itemize}
-        \item Student Assistant Fundamentals of Computer Science, KU Leuven, 2020 \\
-        Teaching exercise sessions in Python programming and algorithmic reasoning to first year engineering
-        students.
-        \item PAL tutor Principles of Computer Programming, KU Leuven, 2015 \\
-        Organizing and teaching peer-assisted learning sessions in Python programming to first year Informatics
-        students.
-    \end{itemize}
+    \begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
+        01/2020 - 06/2020 & Student Assistant Fundamentals of Computer Science, KU Leuven; Teaching exercise sessions
+        in Python
+        programming and algorithmic reasoning to first year engineering students. \\
+        2015 & PAL tutor Principles of Computer Programming, KU Leuven; Organizing and teaching peer-assisted
+        learning sessions in Python programming to first year Informatics students. \\
+    \end{tabularx}
+
 
     \section*{Funding}
 
-    \begin{itemize}
-        \item KU Leuven and University of Lille Global Ph.D. Scholarship, 2020 \\
-        Proposal: \textit{EEG-based Visual Brain-Computer Interface for Gaze-free Communication}
-    \end{itemize}
+    \begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
+        2020 & KU Leuven and University of Lille Global Ph.D. Scholarship; Proposal: \textit{EEG-based Visual
+        Brain-Computer Interface for Gaze-free Communication} \\
+
+    \end{tabularx}
 
     \section*{Publications}
 
