@@ -1,10 +1,23 @@
 image: blang/latex
-compile_pdf:
+compile_professional:
   script:
     - set +e
     - tlmgr init-usertree
     - tlmgr install fontawesome
-    - pdflatex cv.tex
+    - pdflatex professional_cv.tex
   artifacts:
     paths:
-      - cv.pdf
+      - professional_cv.pdf
+
+compile_academic:
+  script:
+    - set +e
+    - tlmgr init-usertree
+    - tlmgr install fontawesome
+    - xelatex academic_cv.tex
+    - biber professional_cv.tex
+    - xelatex academic_cv.tex
+    - xelatex academic_cv.tex
+  artifacts:
+    paths:
+      - academic_cv.pdf
