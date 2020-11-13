@@ -1,4 +1,4 @@
-image: blang/latex
+image: davekleinschmidt/latex
 compile_professional:
   script:
     - set +e
