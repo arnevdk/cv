@@ -3,7 +3,7 @@ image: danteev/texlive
 
 compile_professional:
   script:
-    - pdflatex professional_cv.tex
+    - xelatex professional_cv.tex
   artifacts:
     paths:
       - professional_cv.pdf
@@ -11,7 +11,7 @@ compile_professional:
 compile_academic:
   script:
     - xelatex academic_cv.tex
-    - biber academic_cv.tex
+    - biber academic_cv
     - xelatex academic_cv.tex
     - xelatex academic_cv.tex
   artifacts:
