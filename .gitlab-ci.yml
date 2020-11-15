@@ -12,6 +12,7 @@ compile_professional:
 compile_academic:
   script:
     - set +e
+    - apt install wget xzdec
     - tlmgr init-usertree
     - tlmgr install fontawesome
     - tlmgr install academicons
