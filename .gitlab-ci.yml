@@ -1,8 +1,8 @@
-image: janstuemmel/latex
+image: blang/latex
 
 before_script:
   - set +e
-  - apt update && apt install wget xzdec texlive-fonts-extra -y
+  - apt update && apt install wget xzdec texlive-fonts-extra biber -y
   - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
   - tlmgr init-usertree
 
