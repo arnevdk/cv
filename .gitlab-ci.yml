@@ -1,14 +1,8 @@
-image: blang/latex
+image: danteev/texlive
 
-before_script:
-  - set +e
-  - apt update && apt install wget xzdec texlive-fonts-extra biber -y
-  - tlmgr init-usertree
-  - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
 
 compile_professional:
   script:
-    - tlmgr install fontawesome
     - pdflatex professional_cv.tex
   artifacts:
     paths:
@@ -16,8 +10,6 @@ compile_professional:
 
 compile_academic:
   script:
-    - tlmgr install fontawesome
-    - tlmgr install academicons
     - xelatex academic_cv.tex
     - biber academic_cv.tex
     - xelatex academic_cv.tex
