@@ -1,10 +1,13 @@
 image: blang/latex
+
+before_script:
+  - set +e
+  - apt update && apt install wget xzdec texlive-fonts-extra
+  - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
+  - tlmgr init-usertree
+
 compile_professional:
   script:
-    - set +e
-    - apt update && apt install wget xzdec
-    - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
-    - tlmgr init-usertree
     - tlmgr install fontawesome
     - pdflatex professional_cv.tex
   artifacts:
@@ -13,10 +16,6 @@ compile_professional:
 
 compile_academic:
   script:
-    - set +e
-    - apt update && apt install wget xzdec
-    - tlmgr init-usertree
-    - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
     - tlmgr install fontawesome
     - tlmgr install academicons
     - xelatex academic_cv.tex
