@@ -1,7 +1,7 @@
 # Arne Van Den Kerchove
 
-[Professional Resume]( https://gitlab.com/arne.vandenkerchove/curriculum-vitae/-/jobs/artifacts/master/raw/professional_cv.pdf?job=compile_professional)
+[Professional Resume]( https://gitlab.com/arne.vandenkerchove/curriculum-vitae/-/jobs/artifacts/master/raw/out/professional_cv.pdf?job=compile)
 
-[Academic CV]( https://gitlab.com/arne.vandenkerchove/curriculum-vitae/-/jobs/artifacts/master/raw/academic_cv.pdf?job=compile_academic)
+[Academic CV]( https://gitlab.com/arne.vandenkerchove/curriculum-vitae/-/jobs/artifacts/master/raw/out/academic_cv.pdf?job=compile)
 
 https://arne.vandenkerchove.com
