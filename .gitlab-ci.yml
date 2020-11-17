@@ -1,19 +1,9 @@
 image: danteev/texlive
 
-
-compile_professional:
+compile:
   script:
-    - xelatex professional_cv.tex
+    - latexmk
   artifacts:
     paths:
-      - professional_cv.pdf
-
-compile_academic:
-  script:
-    - xelatex academic_cv.tex
-    - biber academic_cv
-    - xelatex academic_cv.tex
-    - xelatex academic_cv.tex
-  artifacts:
-    paths:
-      - academic_cv.pdf
+      - out/professional_cv.pdf
+      - out/academic_cv.pdf
