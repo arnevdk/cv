@@ -10,7 +10,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{doi}
-\usepackage[style=apa, sorting=ynt]{biblatex}
+\usepackage[style=apa, sorting=ynt,doi=false]{biblatex}
 \usepackage{enumitem}
 
 \usepackage{makecell}
@@ -30,10 +30,10 @@
 
 \begin{document}
 \maketitle
-\begin{minipage}{.75\linewidth}
+\begin{minipage}[b]{.7\linewidth}
 	\Large \textbf{Arne Van Den Kerchove}\\
 	\normalsize Doctoral Researcher Computational Neuroscience\\
-	KU Leuven, Université de Lille
+	KU Leuven, University of Lille
 
 	\bigskip
 
@@ -56,7 +56,7 @@
 		\faLinkedin  & \url{https://linkedin.com/in/arnevdk}
 	\end{tabular}
 \end{minipage}%
-\begin{minipage}{.25\linewidth}
+\begin{minipage}[b]{.29\linewidth}
 	\includegraphics[width=\linewidth]{photo.jpg}
 \end{minipage}
 
@@ -72,7 +72,7 @@ I am a highly motivated researcher and Ph.D. candidate at the KU Leuven Laborato
 
 My goal is to help these individuals achieve greater independence and improve their quality of life by developing BCIs that are both accurate and easy to use. To accomplish this, I am combining my expertise in machine learning, signal processing, and user interface design combined with insights from neurophysiology to develop an EEG event-related potential BCI system for real-time communication that does not depend on eye movement control. I believe that these non-invasive BCIs have the potential to revolutionize the lives of individuals with severe disabilities and help them live more fulfilling and independent lives.
 
-\paragraph{Keywords} brain-computer interfaces, event-related
+\paragraph{Keywords:} brain-computer interfaces, event-related
 potentials, multilinear classification, covert visual attention
 
 \section*{Education}
@@ -140,11 +140,8 @@ potentials, multilinear classification, covert visual attention
 
 \section*{Teaching Experience}
 
+\subsection*{Classes}
 \begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
-	05/2022 - ongoing & \makecell[{{X}}t]{\textbf{Project Supervisor}, NeuroTech Leuven                          \\
-		Project supervisor and technical advisor for extracurricular
-	neurotechnology student projects and a student team participating in the annual NeuroTechX BCI competition.} \\
-
 	02/2022 - ongoing & \makecell[{{X}}t]{\textbf{Teaching Assistant Brain-Computer Interfaces}, KU Leuven       \\
 		Teaching exercise sessions in Brain-Computer Interface design and
 		signal processing to students in the Master of Bioengineering and
@@ -153,10 +150,28 @@ potentials, multilinear classification, covert visual attention
 		Teaching exercise sessions in Python programming and
 		algorithmic reasoning to students in the Bachelor of
 	Engineering Sciences.}                                                                                       \\
+\end{tabularx}
+
+\subsection*{Master Theses and Internships Supervised}
+\begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
+	2021 - 2022       & \makecell[{{X}}t]{\textbf{A Hybrid P300 – Gaze BCI Alternative
+	for Navigating in Virtual Spaces}, KU Leuven}                                                                                                   \\
+	03/2023 - 05/2023 & \makecell[{{X}}t]{\textbf{Single-trial ERP component latencies as a predictor for the mode of visual attention}, KU Leuven} \\
+\end{tabularx}
+
+
+\subsection*{Extracurricular}
+\begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
+	05/2022 - ongoing & \makecell[{{X}}t]{\textbf{Project Supervisor}, NeuroTech Leuven                          \\
+		Project supervisor and technical advisor for extracurricular
+	neurotechnology student projects and a student team participating in the annual NeuroTechX BCI competition.} \\
 	09/2015 - 01/2016 & \makecell[{{X}}t]{\textbf{PAL Tutor Principles of Computer Programming}, KU Leuven       \\
 		Organizing and teaching peer-assisted learning sessions in Python programming for first year informatics
 	students.}                                                                                                   \\
 \end{tabularx}
+
+
+
 
 \section*{Professional and Volunteering Experience}
 
@@ -175,12 +190,17 @@ potentials, multilinear classification, covert visual attention
 
 
 \section*{Licenses and Certifications}
-\begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
-	2022 & \makecell[{{X}}t]{\textbf{Ambulance EMT}, FOD
-	Volksgezondheid}                                                 \\
-	2021 & \makecell[{{X}}t]{\textbf{ICH Good Clinical Practice E6},
-	TransCelerate BioPharma Inc. }                                   \\
-\end{tabularx}
+%\begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
+%	2022 & \makecell[{{X}}t]{\textbf{Ambulance EMT}, FOD
+%	Volksgezondheid}                                                 \\
+%	2021 & \makecell[{{X}}t]{\textbf{ICH Good Clinical Practice E6},
+%	TransCelerate BioPharma Inc. }                                   \\
+%\end{tabularx}
+
+\textbf{ICH Good Clinical Practice}, E6 TransCelerate BioPharma Inc.
+\smallskip
+
+\textbf{Ambulance EMT}, FOD Volksgezondheid \\
 
 \section*{Languages}
 \begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
