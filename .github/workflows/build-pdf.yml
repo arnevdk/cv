@@ -19,10 +19,10 @@ jobs:
       - name: Upload cv
         uses: actions/upload-artifact@v4
         with:
-          name: cv.pdf
+          name: arnevdk_cv.pdf
           path: ./cv.pdf
       - name: Upload resume
         uses: actions/upload-artifact@v4
         with:
-          name: resume.pdf
+          name: arnevdk_resume.pdf
           path: ./resume.pdf
