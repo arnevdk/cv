@@ -1,16 +1,11 @@
-\documentclass[10pt,a4paper]{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\documentclass{resume}
 \usepackage{doi}
 \usepackage[style=apa, sorting=ynt,doi=false]{biblatex}
-\usepackage{enumitem}
+%\usepackage{enumitem}
 \usepackage{makecell}
 \usepackage{tabularx}
-\usepackage{titlesec}
-\usepackage{fontspec}
+%\usepackage{titlesec}
+%\usepackage{fontspec}
 
 %\usepackage{academicons}
 %\usepackage{hanging}
@@ -21,20 +16,16 @@
 % Structure
 
 \newcommand{\cventry}[4]{
-  \begin{tabularx}{\linewidth}{@{}p{1in} X@{}}
-  	#1    & \makecell[{{X}}t]{\textbf{#2}, #3\\#4}
-  \end{tabularx}\smallskip\smallskip
+	\begin{tabularx}{\linewidth}{@{}p{.9in} X@{}}
+		#1 & \makecell[{{X}}t]{\textbf{#2}, #3 \\#4}
+	\end{tabularx}\smallskip\smallskip
 }
 
 
 % Layout
 
-\geometry{left=1in,right=1in,top=1in,bottom=1in}
+%\geometry{left=1in,right=1in,top=1in,bottom=1in}
 \pagenumbering{gobble}
-\setlength{\parindent}{0pt}
-
-\titleformat{\section}
-{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\hrule}]
 
 %Preamble
 
@@ -45,41 +36,31 @@
 \begin{document}
 \maketitle
 
-  \Large\textbf{Arne Van Den Kerchove}, Ph.D.\\
-	\normalsize Postdoctoral researcher Computational Neuroscience\\
-	KU Leuven
-	\bigskip
+{\Large\textbf{Arne Van Den Kerchove}, Ph.D.}\\
+Postdoctoral researcher computational neuroscience \\
+KU Leuven \\
+Laboratory for Neuro- and Psychophysiology
+\bigskip
 
-	\texttt{arne.vandenkerchove@kuleuven.be \\
-		arne@vandenkerchove.com \\
-		+32 473 32 78 71 \\
-		\url{https://arne.vandenkerchove.com}\\
-		\url{https://orcid.org/0000-0002-9367-2986} \\
-		\url{https://linkedin.com/in/arnevdk} \\}
+\texttt{arne.vandenkerchove@kuleuven.be} \\
+\texttt{arne@vandenkerchove.com} \\
+\texttt{+32 473 32 78 71} \\
+\texttt{\url{https://orcid.org/0000-0002-9367-2986}} \\
+\texttt{\url{https://linkedin.com/in/arnevdk}}
 
 
 \section*{About me}
 
-I am a postdoctoral researcher at the KU Leuven Laboratory for Neuro- and
-Psychophysiology. My research is centered on developing neurotechnology and brain-computer
-interface (BCI) technologies with a primary focus on assisting individuals with
-severe disabilities, especially those with motor and eye movement impairments.
-My goal is to enhance quality of life by creating accurate and
-user-friendly BCIs. Combining my expertise in machine learning, signal
-processing, and user interface design with insights from neurophysiology, I am
-interested in EEG-BCI systems EEG for real-time communication.
-I strongly believe in the potential of innovative neurotechnology to empower
-individuals and patients, enabling them to lead more independent and fulfilling lives.
-
-\paragraph{Keywords:} brain-computer interfaces, event-related
-potentials, multilinear classification, covert visual attention
+Biomedical engineer and postdoctoral researcher specializing in machine learning for neurotechnology. Experienced in
+brain-computer interfacing (BCI) methods and applications, EEG data classiﬁcation, and real-time biosignal processing.
+Strong interdisciplinary background in computational neuroscience, clinical research, and software development.
 
 \section*{Education}
 
 \cventry{2024}{Ph.D. in Biomedical Sciences}{KU Leuven}{Supervisor: prof.
 	Marc Van Hulle}
 \cventry{2024}{Ph.D. in Control Science and Signal Processing}{University of
-	Lille}{Supervisor: prof. François Cabestaing}
+	Lille}{Supervisors: prof. François Cabestaing, prof. Hakim Si-Mohammed}
 \cventry{2020}{M.Sc. in Engineering Science: Computer Science}{KU Leuven}{
 	%Thesis: \textit{Linguistic transcription of EEG responses to sequences of visual stimuli}                \\
 	Supervisor: prof. Marc Van Hulle                                                                         \\
@@ -91,16 +72,64 @@ potentials, multilinear classification, covert visual attention
 	Minor: Natural Sciences
 }
 
-\section*{Publications}
+\section*{Publications \& projects}
 
-\nocite{*}
+%\nocite{*}
+%\printbibliography[heading=none]
 
-\printbibliography[heading=none]
+\subsubsection*{Peer-reviewed journal articles}
+\begin{description}
+	\item  Van Den Kerchove A., Si-Mohammed H., Van Hulle M.M. \& Cabestaing F. (2024) \\
+	      \emph{Correcting for ERP latency jitter improves gaze-independent BCI decoding}, \\
+	      Journal of Neural Engineering.
+	\item Van Den Kerchove A., Libert A., Wittevrongel B. \& Van Hulle M.M.  (2022) \\
+	      \emph{Classification of event-related potentials with regularized spatiotemporal LCMV beamforming}, \\
+	      Applied Sciences.
+	\item Libert A., Van Den Kerchove A., Wittevrongel, B. \& Van Hulle M.M. (2022) \\
+	      \emph{Analytic beamformer transformation for transfer learning in motion-onset visual evoked potential decoding}, \\
+	      Journal of Neural Engineering.
+\end{description}
+
+\subsubsection*{Preprints and journal articles currently under peer review}
+\begin{description}
+	\item Van Dyck B., Van Den Kerchove, A. \& Van Hulle M.M. (2025)\\
+	      \emph{An open-source implementation of a closed-loop electrocorticographic
+		      brain-computer interface with Micromed, Fieldtrip, and Psychopy}, \\
+	      Biomedical Signal Processing and Control (in review).
+	\item Van Den Kerchove A., Meunier J., de Moura, M., Willemssens A., Geurinckx D., Schiettecatte E., Van Damme P., Si-Mohammed H., Cabestaing F., Allart E., \& Van Hulle, M.M. (2025)\\
+	      \emph{Visual ERP-based brain-computer interface use with severe physical, speech and eye movement impairments: case studies}, \\
+	      Journal of NeuroEngineering and Rehabilitation (in review).
+\end{description}
+
+
+\subsubsection*{Ongoing and other projects}
+
+\begin{description}
+	\item Verovnik B., Hajduk S., Van Den Kerchove A. \& Van Hulle M.M. (2025)\\
+	      \emph{Phenotype prediction from resting state fMRI connectivity}.
+	\item Van Den Kerchove A. (2024) \\
+	      \emph{A visual brain-computer interface for gaze-free communication}, \\
+	      doctoral thesis, KU Leuven \& University of Lille.
+	\item Van Den Kerchove A., Si-Mohammed H., Cabestaing, F. \& Van Hulle M.M. (2025) \\
+	      \emph{Block-Term Tensor Discriminant
+		      Analysis for brain-computer interface decoding}.
+	\item Van Den Kerchove A., Mlinari\v{c} T., Barinaga Z., Verovnik B., \& Van Hulle, M.M. (2025) \\
+	      \emph{Diagnosing Alzheimer's Disease and Frontotemporal Dementia from
+		      resting state EEG using Riemannian Geometry}.
+	\item Van Den Kerchove A., Mirsaeedi M., Van Dyck B. \& Van Hulle M.M. (2025) \\
+	      \emph{An event-related potential BCI speller using a wearable, single-channel
+		      EEG headset with electrodes on the forehead}, \\
+	      Proceedings of the International Work-Conference on Artificial Neural Networks.
+	\item Van Den Kerchove A. (2024) \\
+	      \emph{Linguistic transcription of EEG responses to sequences of visual stimuli}
+	      master's thesis, KU Leuven.
+
+\end{description}
 
 
 \section*{Awards \& funding}
 
-\cventry{2024}{Clinical Trial Sponsorship Program}{Zeto}{
+\cventry{2024}{Clinical trial sponsorship program}{Zeto}{
 	Our research project titled ``A gaze-independent Visual Brain-Computer
 	Interface for use by patients with limited or no eye control'' won a spot in
 	the Zeto Clinical Trial Sponsorship Program, granting us the resources to conduct research
@@ -113,52 +142,57 @@ potentials, multilinear classification, covert visual attention
 }
 
 \cventry{2021 - 2024}{Global Ph.D. Partnership Grant}{KU Leuven and University
-	of Lille}{Topic: \textit{EEG-based visual brain-computer interface for
-		gaze-free communication}}
+	of Lille}{Research funding for a four-year PhD project on EEG-based visual brain-computer interfacing for
+	gaze-free communication}
 
 
 \section*{Conferences and presentations}
 
-\subsection*{Presented}
+\subsubsection*{Presented}
 
-\cventry{2024}{CORTICO 2024}{CORTICO, Nancy}{
+\cventry{2025}{18th International Work-Conference on Artificial Neural Networks}{A Coru\~na}{%
+	Poster presentation on single-channel, wearable ERP-BCI speller design.
+}
+\cventry{2024}{CORTICO Days 2024}{CORTICO, Nancy}{
 	Poster presentation on covert visual attention BCIs for patients with
 	oculomotor impairment.}
-\cventry{2023}{10th International BCI Meeting}{BCI Society, Brussels}{
+\cventry{2023}{10th International BCI Meeting}{BCI Society, Brussels}{%
 	Poster presentation on classifier-based latency estimation for
 	gaze-independent BCIs.}
-\cventry{2022}{Leuven.AI Scientific Workshop 2022}{Leuven.AI, Leuven}{
+\cventry{2022}{Leuven.AI Scientific Workshop 2022}{Leuven.AI, Leuven}{%
 	Poster presentation on (multi-)Kronecker-structured linear discriminant
 	analysis for low sample size event-related potential classification.}
-\cventry{2022}{CORTICO 2022}{CORTICO, Grenoble}{
+\cventry{2022}{CORTICO Days 2022}{CORTICO, Grenoble}{%
 	Oral presentation on Kronecker-structured LCMV-beamforming for event-related potential
 	classification.}
-\cventry{2021}{CORTICO 2021}{CORTICO}{
+\cventry{2021}{CORTICO Days 2021}{CORTICO, online}{%
 	Oral presentation on a multi-component approach
 	to spatiotemporal beamforming decoding of event-related potentials.}
 
-\subsection*{Attended}
+\subsubsection*{Attended}
 
-\cventry{2024}{BCI \& Neurotechnology Spring School 2024}{g.tec}{}
+\cventry{2025}{CORTICO Days 2025}{CORTICO, Lyon}{}
+\cventry{2025}{BCI \& Neurotechnology Spring School 2025}{g.tec, online}{}
+\cventry{2024}{BCI \& Neurotechnology Spring School 2024}{g.tec, online}{}
 \cventry{2023}{Closed Loop Neurotechnologies Autumn School}{NeurotechEU, Lille}{}
-\cventry{2023}{CORTICO 2023}{CORTICO, Paris}{}
-\cventry{2023}{BCI \& Neurotechnology Spring School 2023}{g.tec}{}
-\cventry{2022}{BCI \& Neurotechnology Masterclass Belgium}{g.tec}{}
-\cventry{2022}{BCI \& Neurotechnology Spring School 2022}{g.tec}{}
+\cventry{2023}{CORTICO Days 2023}{CORTICO, Paris}{}
+\cventry{2023}{BCI \& Neurotechnology Spring School 2023}{g.tec, online}{}
+\cventry{2022}{BCI \& Neurotechnology Masterclass Belgium}{g.tec, online}{}
+\cventry{2022}{BCI \& Neurotechnology Spring School 2022}{g.tec, online}{}
 
 \section*{Teaching Experience}
 
-\subsection*{Classes}
+\subsubsection*{Classes}
 
-\cventry{2022 - ongoing}{Teaching assistant Brain-Computer Interfaces}{KU
-	Leuven}{
+\cventry{2022 - ongoing}{Teaching assistant \textit{Brain-Computer Interfaces}}{KU
+	Leuven}{%
 	Teaching exercise sessions in BCI design and signal processing to students in
 	the Master of Bioengineering and Advanced Master of Artificial Intelligence.}
-\cventry{2022}{Teaching assistant Fundamentals of Computer Science}{KU Leuven}{
+\cventry{2022}{Teaching assistant \textit{Fundamentals of Computer Science}}{KU Leuven}{
 	Teaching exercise sessions in Python programming and algorithmic reasoning to
 	students in the Bachelor of	Engineering Sciences.}
 
-\subsection*{Master theses and internships}
+\subsubsection*{Master theses and internships supervised}
 
 \cventry{2024}{Eye-tracker and ERP data fusion for gaze-independent visual
 	BCI}{Juliette  Meunier, University of Lille}{}
@@ -173,24 +207,29 @@ potentials, multilinear classification, covert visual attention
 \cventry{2021 - 2022}{A hybrid P300-gaze BCI alternative for navigating virtual
 	spaces}{Gijs Claes, KU Leuven}{}
 
-\subsection*{Extracurricular}
+\subsubsection*{Extracurricular}
 
 \cventry{2022 - ongoing}{Project supervisor}{NeuroTech Leuven}{
 	Project supervisor and technical advisor for extracurricular
-	neurotechnology student projects and a student team competing in the annual NeuroTechX BCI competition.}
-\cventry{2015 - 2016}{PAL tutor Principles of Computer Programming}{KU
-	Leuven}{ Organizing and teaching peer-assisted learning sessions in Python programming for first year informatics	students.}
+	neurotechnology student projects and a student team competing in the annual NeuroTechX BCI competition and
+	other projects related to BCI and neurodegeneration.
+}
+\cventry{2015 - 2016}{PAL tutor \textit{Principles of Computer Programming}}{KU
+	Leuven}{Organizing and teaching peer-assisted learning sessions in Python programming for first year Bachelor of Informatics	students.}
 
-\section*{Professional and volunteering Experience}
+\section*{Professional and volunteering experience}
+\subsubsection*{Professional}
 
-\cventry{2025 - ongoing}{Postdoctoral researcher}{KU Leuven}{}
-\cventry{2023 - 2024}{Doctoral researcher}{Université de Lille}{}
-\cventry{2022 - ongoing}{Ambulance EMT}{Red Cross, FAST	vzw}{}
-\cventry{2021 - 2022}{Doctoral researcher}{KU Leuven}{}
-\cventry{2019}{Python developer}{Mindspeller}{
+\cventry{2025 - ongoing}{Postdoctoral researcher}{KU Leuven, Laboratory for Neuro- and Psychophysiology}{}
+\cventry{2023 - 2024}{Doctoral researcher}{Université de Lille, Research Center for Informatics, Signal Processing and Control Science}{}
+\cventry{2021 - 2022}{Doctoral researcher}{KU Leuven, Laboratory for Neuro- and Psychophysiology}{}
+\cventry{2019}{Python developer}{Mindspeller}{%
 	Python Flask developer in a KU Leuven spin-off that provides neuromarketing services based on
 	scientifically validated neuroscience and AI research.}
-\cventry{2014 - 2020}{Freelance full-stack web developer}{Self-employed}{}
+\cventry{2014 - 2020}{Freelance full-stack web developer}{self-employed}{}
+
+\subsubsection*{Volunteering}
+\cventry{2022 - ongoing}{Ambulance EMT}{Belgian Red Cross, FAST	vzw}{}
 %2018 - 2019       & \makecell[{{X}}t]{\textbf{Board Secretary}, Scientica Leuven vzw}               \\
 %2015 - 2020       & \makecell[{{X}}t]{\textbf{Webmaster}, Wina Leuven vzw and Scientica Leuven vzw} \\
 %2013 - ongoing    & \makecell[{{X}}t]{\textbf{Event EMT}, Red Cross}                                \\
@@ -206,10 +245,9 @@ potentials, multilinear classification, covert visual attention
 \textbf{ICH Good Clinical Practice}, E6 TransCelerate BioPharma Inc.
 \smallskip
 
-\textbf{Ambulance EMT}, FOD Volksgezondheid \\
 
 \section*{Languages}
-\begin{tabularx}{\linewidth}{@{}p{1.2in} X@{}}
+\begin{tabularx}{\linewidth}{@{}p{.9in} X@{}}
 	Dutch   & Native           \\
 	English & Fully proficient \\
 	French  & Advanced         \\

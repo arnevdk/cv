@@ -1,9 +1,0 @@
-image: danteev/texlive
-
-compile:
-  script:
-    - latexmk
-  artifacts:
-    paths:
-      - out/professional_cv.pdf
-      - out/academic_cv.pdf

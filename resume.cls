@@ -20,12 +20,12 @@
 
 % Section and title layout
 \RequirePackage{titlesec}
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
 \titlespacing*{\paragraph}{0pt}{.5em}{.5em}  % Adjust last value for spacing
 
 
 \newcommand{\cvitem}[3]{
-  	#1\hskip1em\textbf{#2}, #3
+	#1\hskip1em\textbf{#2}, #3
 }
 
 \newcommand{\sep}{\hskip1em|\hskip1em}
