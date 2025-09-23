@@ -13,16 +13,16 @@ jobs:
       image: ghcr.io/moderncv/debian-texlive-docker:main
     steps:
       - name: Checkout code
-        uses: actions/checkout
+        uses: actions/checkout@v4
       - name: Build PDF
         run: latexmk
       - name: Upload cv
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v4
         with:
           name: cv.pdf
           path: ./cv.pdf
       - name: Upload resume
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v4
         with:
           name: resume.pdf
-          path: ./cv.pdf
+          path: ./resume.pdf
